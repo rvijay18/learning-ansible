@@ -17,3 +17,10 @@
       vars:
         URL: tasks.example.com
 
+
+- name: Inventory level Variables
+  hosts: all
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
