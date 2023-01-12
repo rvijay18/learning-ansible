@@ -39,12 +39,12 @@
   hosts: all
   tasks:
     - name: Get Update
-      ansible.builtin.shell: update
+      ansible.builtin.shell: uptime
       register: out
 
     - name: Print out Register
       ansible.builtin.debug:
-        msg: "{{ out }}"
+        msg: "{{out}}"
 
 
 
