@@ -32,3 +32,19 @@
     - ansible.builtin.debug:
         msg: Hostname = {{ ansible_hostname }}
 
+
+
+
+- name: Register a variable example
+  hosts: all
+  tasks:
+    - name: Get Update
+      ansible.builtin.shell: update
+      register: out
+
+    - name: Print out Register
+      ansible.builtin.debug:
+        msg: "{{ out }}"
+
+
+
